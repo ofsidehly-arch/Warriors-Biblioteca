@@ -1,0 +1,848 @@
+:root {
+    --blue-dark: #123f52;
+    --blue: #287c99;
+    --blue-light: #dff4f7;
+
+    --cream: #fffaf0;
+    --white: #ffffff;
+
+    --yellow: #ffd86b;
+    --orange: #f59b62;
+    --pink: #e9a5b5;
+    --purple: #a99bd7;
+
+    --text: #29404a;
+    --text-light: #71818a;
+
+    --shadow: 0 10px 30px rgba(28, 66, 78, 0.12);
+
+    --radius: 25px;
+}
+
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        "Trebuchet MS",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: var(--text);
+    background: #fffdf8;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    position: relative;
+
+    background-image:
+        url("imagens/hero.png");
+
+    background-size: cover;
+    background-position: center top;
+
+    overflow: hidden;
+}
+
+
+.navbar {
+    width: min(1100px, 90%);
+    margin: auto;
+
+    padding-top: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: white;
+
+    padding: 11px 22px;
+
+    border-radius: 999px;
+
+    color: var(--blue-dark);
+
+    font-weight: bold;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,.12);
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+
+.logo:hover {
+    transform: translateY(-3px);
+    background: #fff5d5;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+    display: flex;
+    gap: 10px;
+
+    background: rgba(255,255,255,.95);
+
+    padding: 8px;
+
+    border-radius: 999px;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,.12);
+}
+
+
+.menu a {
+    padding: 9px 17px;
+
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    color: var(--blue-dark);
+
+    transition:
+        color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.menu a:hover {
+    background: var(--yellow);
+
+    color: #5a4214;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   CONTEÚDO DO TOPO
+========================= */
+
+.hero-content {
+    width: min(1100px, 90%);
+    margin: auto;
+
+    min-height: 560px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding-bottom: 75px;
+}
+
+
+.hero-title-box {
+    background: rgba(255,255,255,.96);
+
+    max-width: 490px;
+
+    padding: 35px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.15);
+
+    animation:
+        appear .8s ease;
+}
+
+
+.small-title {
+    color: var(--blue);
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+
+.hero h1 {
+    margin-top: 7px;
+
+    font-size: clamp(38px, 6vw, 62px);
+
+    line-height: 1;
+
+    color: var(--blue-dark);
+}
+
+
+.hero p {
+    margin-top: 15px;
+
+    color: var(--text-light);
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   BOTÃO PRINCIPAL
+========================= */
+
+.main-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    padding: 13px 21px;
+
+    border-radius: 999px;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 7px 0 #17556b;
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.main-button:hover {
+    background: var(--orange);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 0 #c56e3d;
+}
+
+
+.main-button:active {
+    transform: translateY(3px);
+
+    box-shadow:
+        0 4px 0 #c56e3d;
+}
+
+
+/* =========================
+   INTRODUÇÃO
+========================= */
+
+.welcome {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 90px 25px 70px;
+}
+
+
+.paw-decoration {
+    font-size: 34px;
+
+    margin-bottom: 10px;
+
+    animation:
+        float 3s ease-in-out infinite;
+}
+
+
+.section-label {
+    color: var(--blue);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.welcome h2,
+.section-heading h2,
+.about h2 {
+    color: var(--blue-dark);
+
+    font-size: clamp(28px, 4vw, 40px);
+
+    line-height: 1.15;
+
+    margin-top: 8px;
+}
+
+
+.welcome p {
+    color: var(--text-light);
+
+    max-width: 550px;
+
+    margin: 15px auto 0;
+}
+
+
+/* =========================
+   BIBLIOTECA
+========================= */
+
+.library {
+    width: min(1100px, 90%);
+
+    margin: auto;
+
+    padding-bottom: 90px;
+}
+
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   PESQUISA
+========================= */
+
+.search-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: white;
+
+    border:
+        2px solid #e6eeee;
+
+    padding: 10px 16px;
+
+    border-radius: 999px;
+
+    transition:
+        border .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.search-box:focus-within {
+    border-color: var(--blue);
+
+    box-shadow:
+        0 5px 20px rgba(40,124,153,.15);
+}
+
+
+.search-box input {
+    border: none;
+
+    outline: none;
+
+    font-size: 14px;
+
+    background: transparent;
+
+    width: 190px;
+
+    color: var(--text);
+}
+
+
+/* =========================
+   LIVROS
+========================= */
+
+.books-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.book-card {
+    background: white;
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    border:
+        2px solid #eef3f2;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+
+.book-card:hover {
+    transform:
+        translateY(-9px)
+        rotate(-0.5deg);
+
+    box-shadow:
+        0 20px 40px rgba(30,70,80,.17);
+
+    border-color:
+        #f5d675;
+}
+
+
+/* =========================
+   CAPAS
+========================= */
+
+.book-cover {
+    height: 230px;
+
+    padding: 15px;
+
+    background: #e8f4f3;
+}
+
+
+.cover-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 65px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #5ab5c6,
+            #bce9df
+        );
+}
+
+
+.cover-placeholder.orange {
+    background:
+        linear-gradient(
+            145deg,
+            #f6ad75,
+            #ffe2aa
+        );
+}
+
+
+.cover-placeholder.purple {
+    background:
+        linear-gradient(
+            145deg,
+            #9184ca,
+            #dcd3f5
+        );
+}
+
+
+/* =========================
+   INFORMAÇÕES DOS LIVROS
+========================= */
+
+.book-info {
+    padding: 23px;
+}
+
+
+.book-number {
+    color: var(--orange);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.book-info h3 {
+    color: var(--blue-dark);
+
+    font-size: 20px;
+
+    margin-top: 4px;
+}
+
+
+.book-info p {
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================
+   BOTÕES DOS LIVROS
+========================= */
+
+.book-buttons {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+
+.book-button {
+    flex: 1;
+
+    text-align: center;
+
+    padding: 10px;
+
+    border-radius: 14px;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+.book-button:hover {
+    background: var(--orange);
+
+    transform:
+        translateY(-2px);
+}
+
+
+.book-button.secondary {
+    flex: 0 0 44px;
+
+    background: #edf5f4;
+
+    color: var(--blue-dark);
+}
+
+
+.book-button.secondary:hover {
+    background: var(--yellow);
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.about {
+    background:
+        var(--blue-light);
+
+    padding:
+        80px 5%;
+}
+
+
+.about-card {
+    max-width: 900px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.about-icon {
+    width: 75px;
+    height: 75px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--yellow);
+
+    border-radius: 22px;
+
+    font-size: 32px;
+}
+
+
+.about p {
+    margin-top: 10px;
+
+    color: var(--text-light);
+
+    max-width: 650px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background:
+        var(--blue-dark);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    font-size: 13px;
+}
+
+
+footer span {
+    display: block;
+
+    margin-top: 10px;
+
+    color: var(--yellow);
+}
+
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-7px);
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        min-height: 600px;
+    }
+
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .menu {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .menu a {
+        padding:
+            8px 12px;
+    }
+
+
+    .hero-content {
+        min-height: 480px;
+
+        align-items: flex-end;
+
+        padding-bottom: 40px;
+    }
+
+
+    .hero-title-box {
+        width: 100%;
+
+        padding: 28px;
+
+        text-align: center;
+    }
+
+
+    .section-heading {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .search-box input {
+        width: 100%;
+    }
+
+
+    .books-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   CELULAR PEQUENO
+========================= */
+
+@media (max-width: 520px) {
+
+    .hero {
+        min-height: 540px;
+
+        background-position:
+            center top;
+    }
+
+
+    .menu a {
+        font-size: 12px;
+
+        padding:
+            7px 9px;
+    }
+
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+
+    .books-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .about-card {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 28px;
+    }
+
+
+    .book-cover {
+        height: 260px;
+    }
+}
