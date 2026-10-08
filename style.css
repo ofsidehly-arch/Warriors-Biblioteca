@@ -62,7 +62,7 @@ a {
     position: relative;
 
     background-image:
-        url("imagens/hero.png");
+        url("hero.png");
 
     background-size: cover;
     background-position: center top;
