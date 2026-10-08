@@ -43,6 +43,7 @@ body {
 
     color: var(--text);
     background: #fffdf8;
+
     line-height: 1.6;
 }
 
@@ -65,6 +66,7 @@ a {
         url("hero.png");
 
     background-size: cover;
+
     background-position: center top;
 
     overflow: hidden;
@@ -73,19 +75,24 @@ a {
 
 .navbar {
     width: min(1100px, 90%);
+
     margin: auto;
 
     padding-top: 25px;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 }
 
 
 .logo {
     display: flex;
+
     align-items: center;
+
     gap: 8px;
 
     background: white;
@@ -99,7 +106,7 @@ a {
     font-weight: bold;
 
     box-shadow:
-        0 6px 20px rgba(0,0,0,.12);
+        0 6px 20px rgba(0, 0, 0, .12);
 
     transition:
         transform .25s ease,
@@ -109,6 +116,7 @@ a {
 
 .logo:hover {
     transform: translateY(-3px);
+
     background: #fff5d5;
 }
 
@@ -119,25 +127,29 @@ a {
 
 .menu {
     display: flex;
+
     gap: 10px;
 
-    background: rgba(255,255,255,.95);
+    background:
+        rgba(255, 255, 255, .95);
 
     padding: 8px;
 
     border-radius: 999px;
 
     box-shadow:
-        0 6px 20px rgba(0,0,0,.12);
+        0 6px 20px rgba(0, 0, 0, .12);
 }
 
 
 .menu a {
-    padding: 9px 17px;
+    padding:
+        9px 17px;
 
     border-radius: 999px;
 
     font-size: 14px;
+
     font-weight: bold;
 
     color: var(--blue-dark);
@@ -148,8 +160,6 @@ a {
         transform .2s ease;
 }
 
-
-/* EFEITO AO PASSAR O MOUSE */
 
 .menu a:hover {
     background: var(--yellow);
@@ -166,11 +176,13 @@ a {
 
 .hero-content {
     width: min(1100px, 90%);
+
     margin: auto;
 
     min-height: 560px;
 
     display: flex;
+
     align-items: flex-end;
 
     padding-bottom: 75px;
@@ -178,7 +190,8 @@ a {
 
 
 .hero-title-box {
-    background: rgba(255,255,255,.96);
+    background:
+        rgba(255, 255, 255, .96);
 
     max-width: 490px;
 
@@ -187,7 +200,7 @@ a {
     border-radius: 30px;
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,.15);
+        0 15px 40px rgba(0, 0, 0, .15);
 
     animation:
         appear .8s ease;
@@ -208,7 +221,8 @@ a {
 .hero h1 {
     margin-top: 7px;
 
-    font-size: clamp(38px, 6vw, 62px);
+    font-size:
+        clamp(38px, 6vw, 62px);
 
     line-height: 1;
 
@@ -238,7 +252,8 @@ a {
 
     margin-top: 25px;
 
-    padding: 13px 21px;
+    padding:
+        13px 21px;
 
     border-radius: 999px;
 
@@ -287,7 +302,8 @@ a {
 
     margin: auto;
 
-    padding: 90px 25px 70px;
+    padding:
+        90px 25px 70px;
 }
 
 
@@ -317,7 +333,8 @@ a {
 .about h2 {
     color: var(--blue-dark);
 
-    font-size: clamp(28px, 4vw, 40px);
+    font-size:
+        clamp(28px, 4vw, 40px);
 
     line-height: 1.15;
 
@@ -330,7 +347,8 @@ a {
 
     max-width: 550px;
 
-    margin: 15px auto 0;
+    margin:
+        15px auto 0;
 }
 
 
@@ -376,7 +394,8 @@ a {
     border:
         2px solid #e6eeee;
 
-    padding: 10px 16px;
+    padding:
+        10px 16px;
 
     border-radius: 999px;
 
@@ -390,7 +409,7 @@ a {
     border-color: var(--blue);
 
     box-shadow:
-        0 5px 20px rgba(40,124,153,.15);
+        0 5px 20px rgba(40, 124, 153, .15);
 }
 
 
@@ -448,7 +467,7 @@ a {
         rotate(-0.5deg);
 
     box-shadow:
-        0 20px 40px rgba(30,70,80,.17);
+        0 20px 40px rgba(30, 70, 80, .17);
 
     border-color:
         #f5d675;
@@ -456,14 +475,8 @@ a {
 
 
 /* =========================
-   CAPAS
+   ÁREA DAS CAPAS
 ========================= */
-
-/*
-   Área onde ficam as capas.
-   A altura é suficiente para uma capa
-   vertical ficar grande sem ser cortada.
-*/
 
 .book-cover {
     height: 400px;
@@ -475,6 +488,7 @@ a {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     position: relative;
@@ -483,10 +497,20 @@ a {
 }
 
 
-/*
-   Imagens reais das capas.
-   Mantém a proporção original.
-*/
+/* =========================
+   CAPA REAL DO LIVRO 01
+========================= */
+
+.book-cover:has(img) {
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 0;
+
+    overflow: hidden;
+}
+
 
 .book-cover img {
     display: block;
@@ -501,35 +525,17 @@ a {
 
     object-position: center;
 
+    border-radius: 20px;
+
+    margin: 0 auto;
+
     position: relative;
 
-    z-index: 1;
+    z-index: 2;
 
-    margin: auto;
+    -webkit-mask-image: none;
 
-    /*
-       Fade extremamente suave na parte inferior.
-       A capa continua visível, mas se mistura
-       com o fundo do card.
-    */
-
-    -webkit-mask-image:
-        linear-gradient(
-            to bottom,
-            black 0%,
-            black 88%,
-            rgba(0,0,0,.85) 94%,
-            transparent 100%
-        );
-
-    mask-image:
-        linear-gradient(
-            to bottom,
-            black 0%,
-            black 88%,
-            rgba(0,0,0,.85) 94%,
-            transparent 100%
-        );
+    mask-image: none;
 }
 
 
@@ -733,6 +739,7 @@ a {
 
 .about-icon {
     width: 75px;
+
     height: 75px;
 
     flex-shrink: 0;
@@ -740,6 +747,7 @@ a {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     background: var(--yellow);
@@ -771,7 +779,8 @@ footer {
 
     text-align: center;
 
-    padding: 35px 20px;
+    padding:
+        35px 20px;
 
     font-size: 13px;
 }
@@ -824,7 +833,7 @@ footer span {
 
 
 /* =========================
-   CELULAR
+   TABLET / CELULAR
 ========================= */
 
 @media (max-width: 800px) {
@@ -935,5 +944,23 @@ footer span {
 
     .book-cover {
         height: 360px;
+    }
+
+
+    .book-cover:has(img) {
+        background: white;
+
+        padding: 12px;
+    }
+
+
+    .book-cover:has(img) img {
+        height: 100%;
+
+        width: auto;
+
+        max-width: 100%;
+
+        border-radius: 20px;
     }
 }
