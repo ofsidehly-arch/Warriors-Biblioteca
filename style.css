@@ -605,7 +605,18 @@ a {
     background: var(--yellow);
 }
 
+.book-button.coming-soon {
+    background: #edf0ef;
+    color: #879397;
+    cursor: default;
+    box-shadow: none;
+}
 
+.book-button.coming-soon:hover {
+    background: #edf0ef;
+    color: #879397;
+    transform: none;
+}
 /* =========================
    SOBRE
 ========================= */
