@@ -460,11 +460,17 @@ a {
 ========================= */
 
 .book-cover {
-    height: 230px;
-
+    height: 400px;
     padding: 15px;
-
     background: #e8f4f3;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 18px;
 }
 
 
